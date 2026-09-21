@@ -147,5 +147,11 @@
     "notFoundTitle": "Signal lost",
     "notFoundBody": "We could not find that page. The link may have moved.",
     "notFoundCta": "Back to home"
+  },
+  "services": {
+    "title": "OTT apps and TV channels included",
+    "subtitle": "Every plan with IPTV or OTT unlocks these apps and channels.",
+    "ottHeading": "OTT apps",
+    "channelsHeading": "Live TV channels"
   }
 }

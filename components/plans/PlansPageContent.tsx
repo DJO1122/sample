@@ -8,6 +8,7 @@ import { ComboCard } from "@/components/plans/ComboCard";
 import { Disclaimers } from "@/components/plans/Disclaimers";
 import { PlanExplorer } from "@/components/plans/PlanExplorer";
 import { PlanQuiz } from "@/components/plans/PlanQuiz";
+import { ServicesShowcase } from "@/components/plans/ServicesShowcase";
 import { Reveal, RevealGroup, RevealItem } from "@/components/visual/Reveal";
 
 /** The interactive half of /plans. Static copy stays in the server page. */
@@ -60,6 +61,8 @@ export function PlansPageContent() {
           </RevealGroup>
         </div>
       </section>
+
+      <ServicesShowcase />
 
       <section className="section" aria-labelledby="plan-quiz">
         <div className="container-page grid items-start gap-8 lg:grid-cols-2">
