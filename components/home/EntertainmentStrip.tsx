@@ -1,35 +1,73 @@
 "use client";
 
-import { IPTV_CHANNELS, LIVE_CHANNEL_COUNT, OTT_APPS } from "@/data/plans";
+import { LIVE_CHANNEL_COUNT, SERVICES, type Service } from "@/data/plans";
 import { useI18n } from "@/lib/i18n";
 import { usePrefersReducedMotion } from "@/lib/motion";
 import { Reveal } from "@/components/visual/Reveal";
+import { ServiceIcon } from "@/components/visual/ServiceIcon";
 import { cn } from "@/lib/utils";
 
 /**
- * Names only, not logos.
+ * Services shown as monogram app-icon tiles rather than plain text pills.
  *
- * The OTT app and TV channel logos are third-party trademarks. Aerotel needs
- * written permission from each partner before their marks can be displayed, so
- * this strip ships as styled text chips. Swap in logo images only after those
- * permissions are on file.
+ * The tiles are stylized brand-accent monograms, not the partners' real logos
+ * (those are trademarks needing written permission). See ServiceIcon and the
+ * SERVICES source in data/plans.ts for the swap-to-logo path.
  */
-const CHIPS = [
-  ...OTT_APPS,
-  ...IPTV_CHANNELS,
-  `${LIVE_CHANNEL_COUNT}+ live channels`,
-  "SD + HD",
-];
+const OTT = SERVICES.filter((service) => service.kind === "ott");
+const CHANNELS = SERVICES.filter((service) => service.kind === "channel");
+
+function Marquee({
+  items,
+  reversed = false,
+}: {
+  items: Service[];
+  reversed?: boolean;
+}) {
+  const reduced = usePrefersReducedMotion();
+
+  return (
+    <div
+      className="relative [mask-image:linear-gradient(90deg,transparent,#000_7%,#000_93%,transparent)]"
+      role="list"
+    >
+      <div
+        className={cn(
+          "flex w-max gap-3 px-4",
+          !reduced && "motion-safe:animate-marquee",
+          reduced && "flex-wrap justify-center",
+        )}
+        style={
+          !reduced && reversed
+            ? { animationDirection: "reverse" }
+            : undefined
+        }
+      >
+        {(reduced ? items : [...items, ...items]).map((service, index) => (
+          <span
+            key={`${service.name}-${index}`}
+            role="listitem"
+            className="rounded-full border border-white/15 bg-white/10 py-2 pl-2 pr-4 backdrop-blur-sm"
+          >
+            <ServiceIcon service={service} labelClassName="text-white" />
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function EntertainmentStrip() {
   const { t } = useI18n();
-  const reduced = usePrefersReducedMotion();
 
   return (
     <section className="overflow-hidden bg-royal py-14" aria-labelledby="entertainment">
       <div className="container-page">
         <Reveal className="text-center">
-          <h2 id="entertainment" className="font-display text-2xl font-bold text-white sm:text-3xl">
+          <h2
+            id="entertainment"
+            className="font-display text-2xl font-bold text-white sm:text-3xl"
+          >
             {t("entertainment.title")}
           </h2>
           <p className="mx-auto mt-2 max-w-xl text-sm text-white/70">
@@ -38,29 +76,25 @@ export function EntertainmentStrip() {
         </Reveal>
       </div>
 
-      <div
-        className="relative mt-8 [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]"
-        role="list"
-        aria-label={t("entertainment.title")}
-      >
-        <div
-          className={cn(
-            "flex w-max gap-3 px-4",
-            !reduced && "motion-safe:animate-marquee",
-            reduced && "flex-wrap justify-center",
-          )}
-        >
-          {(reduced ? CHIPS : [...CHIPS, ...CHIPS]).map((chip, index) => (
-            <span
-              key={`${chip}-${index}`}
-              role="listitem"
-              className="whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white"
-            >
-              {chip}
-            </span>
-          ))}
+      <div className="mt-8 space-y-4">
+        <div>
+          <p className="container-page mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan">
+            OTT apps
+          </p>
+          <Marquee items={OTT} />
+        </div>
+        <div>
+          <p className="container-page mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan">
+            {LIVE_CHANNEL_COUNT}+ live channels include
+          </p>
+          <Marquee items={CHANNELS} reversed />
         </div>
       </div>
+
+      <p className="container-page mt-8 text-center text-xs text-white/70">
+        App and channel names are shown for the content available on Aerotel
+        plans and belong to their respective owners.
+      </p>
     </section>
   );
 }

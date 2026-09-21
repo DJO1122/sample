@@ -120,23 +120,51 @@ export const BROADBAND_PLANS: readonly BroadbandPlan[] = [
  * third-party trademarks; render them as brand logos only once Aerotel has
  * written permission from each partner to display their marks.
  */
-export const OTT_APPS: readonly string[] = [
-  "Sun NXT",
-  "aha",
-  "ZEE5",
-  "Sony LIV",
-  "JioHotstar",
-  "Prime Video",
+export type ServiceKind = "ott" | "channel";
+
+export interface Service {
+  /** Full display name. */
+  name: string;
+  /** 1-3 characters shown inside the app-icon tile. */
+  monogram: string;
+  /** Brand-associated accent, used only as a tile background tint. */
+  accent: string;
+  kind: ServiceKind;
+}
+
+/**
+ * Service tiles rendered as monogram "app icons".
+ *
+ * These are STYLIZED monogram tiles in brand-associated colours, NOT the
+ * partners' actual logos - the real logos are third-party trademarks and need
+ * written permission from each partner before they can be shown. When those
+ * permissions are on file, swap each tile's monogram for the partner's logo
+ * image (see components/visual/ServiceIcon.tsx); the names and colours below
+ * are the single source both this strip and the combo cards read from.
+ */
+export const SERVICES: readonly Service[] = [
+  { name: "Sun NXT", monogram: "S", accent: "#E11D2E", kind: "ott" },
+  { name: "aha", monogram: "aha", accent: "#F5761A", kind: "ott" },
+  { name: "ZEE5", monogram: "Z5", accent: "#6D28D9", kind: "ott" },
+  { name: "Sony LIV", monogram: "LIV", accent: "#1D4ED8", kind: "ott" },
+  { name: "JioHotstar", monogram: "JH", accent: "#0F3CC9", kind: "ott" },
+  { name: "Prime Video", monogram: "PV", accent: "#00A8E1", kind: "ott" },
+  { name: "Sun TV", monogram: "Sun", accent: "#E11D2E", kind: "channel" },
+  { name: "KTV", monogram: "KTV", accent: "#DB2777", kind: "channel" },
+  { name: "Star Vijay", monogram: "SV", accent: "#9333EA", kind: "channel" },
+  { name: "Colors Tamil", monogram: "CT", accent: "#EA580C", kind: "channel" },
+  { name: "Zee Tamil", monogram: "ZT", accent: "#7C3AED", kind: "channel" },
+  { name: "Star Sports", monogram: "SS", accent: "#0EA5E9", kind: "channel" },
 ] as const;
 
-export const IPTV_CHANNELS: readonly string[] = [
-  "Sun TV",
-  "KTV",
-  "Star Vijay",
-  "Colors Tamil",
-  "Zee Tamil",
-  "Star Sports",
-] as const;
+/** Names only, derived from SERVICES so the two never drift apart. */
+export const OTT_APPS: readonly string[] = SERVICES.filter(
+  (service) => service.kind === "ott",
+).map((service) => service.name);
+
+export const IPTV_CHANNELS: readonly string[] = SERVICES.filter(
+  (service) => service.kind === "channel",
+).map((service) => service.name);
 
 const COMBO_INCLUSIONS: readonly string[] = [
   `Smart Play TV OTT apps: ${OTT_APPS.join(", ")}`,
