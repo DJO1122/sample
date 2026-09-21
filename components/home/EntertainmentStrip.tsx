@@ -8,11 +8,10 @@ import { ServiceIcon } from "@/components/visual/ServiceIcon";
 import { cn } from "@/lib/utils";
 
 /**
- * Services shown as monogram app-icon tiles rather than plain text pills.
- *
- * The tiles are stylized brand-accent monograms, not the partners' real logos
- * (those are trademarks needing written permission). See ServiceIcon and the
- * SERVICES source in data/plans.ts for the swap-to-logo path.
+ * Services shown as logo chips (see ServiceIcon). The logos that ship are plain
+ * name wordmarks in each brand's colour - placeholders for the partners'
+ * official artwork, which drops in at the same /public/logos paths once Aerotel
+ * has the brand assets. SERVICES in data/plans.ts is the single source.
  */
 const OTT = SERVICES.filter((service) => service.kind === "ott");
 const CHANNELS = SERVICES.filter((service) => service.kind === "channel");
@@ -27,10 +26,7 @@ function Marquee({
   const reduced = usePrefersReducedMotion();
 
   return (
-    <div
-      className="relative [mask-image:linear-gradient(90deg,transparent,#000_7%,#000_93%,transparent)]"
-      role="list"
-    >
+    <div className="relative [mask-image:linear-gradient(90deg,transparent,#000_7%,#000_93%,transparent)]">
       <div
         className={cn(
           "flex w-max gap-3 px-4",
@@ -44,13 +40,11 @@ function Marquee({
         }
       >
         {(reduced ? items : [...items, ...items]).map((service, index) => (
-          <span
+          <ServiceIcon
             key={`${service.name}-${index}`}
-            role="listitem"
-            className="rounded-full border border-white/15 bg-white/10 py-2 pl-2 pr-4 backdrop-blur-sm"
-          >
-            <ServiceIcon service={service} labelClassName="text-white" />
-          </span>
+            service={service}
+            className="shrink-0"
+          />
         ))}
       </div>
     </div>

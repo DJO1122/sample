@@ -125,10 +125,12 @@ export type ServiceKind = "ott" | "channel";
 export interface Service {
   /** Full display name. */
   name: string;
-  /** 1-3 characters shown inside the app-icon tile. */
+  /** 1-3 characters shown when the logo image is unavailable. */
   monogram: string;
-  /** Brand-associated accent, used only as a tile background tint. */
+  /** Brand-associated accent, used for the monogram fallback tile. */
   accent: string;
+  /** Path under /public to the service logo (swap for official artwork). */
+  logo: string;
   kind: ServiceKind;
 }
 
@@ -143,18 +145,18 @@ export interface Service {
  * are the single source both this strip and the combo cards read from.
  */
 export const SERVICES: readonly Service[] = [
-  { name: "Sun NXT", monogram: "S", accent: "#E11D2E", kind: "ott" },
-  { name: "aha", monogram: "aha", accent: "#F5761A", kind: "ott" },
-  { name: "ZEE5", monogram: "Z5", accent: "#6D28D9", kind: "ott" },
-  { name: "Sony LIV", monogram: "LIV", accent: "#1D4ED8", kind: "ott" },
-  { name: "JioHotstar", monogram: "JH", accent: "#0F3CC9", kind: "ott" },
-  { name: "Prime Video", monogram: "PV", accent: "#00A8E1", kind: "ott" },
-  { name: "Sun TV", monogram: "Sun", accent: "#E11D2E", kind: "channel" },
-  { name: "KTV", monogram: "KTV", accent: "#DB2777", kind: "channel" },
-  { name: "Star Vijay", monogram: "SV", accent: "#9333EA", kind: "channel" },
-  { name: "Colors Tamil", monogram: "CT", accent: "#EA580C", kind: "channel" },
-  { name: "Zee Tamil", monogram: "ZT", accent: "#7C3AED", kind: "channel" },
-  { name: "Star Sports", monogram: "SS", accent: "#0EA5E9", kind: "channel" },
+  { name: "Sun NXT", monogram: "S", accent: "#E11D2E", logo: "/logos/sun-nxt.svg", kind: "ott" },
+  { name: "aha", monogram: "aha", accent: "#F5761A", logo: "/logos/aha.svg", kind: "ott" },
+  { name: "ZEE5", monogram: "Z5", accent: "#6D28D9", logo: "/logos/zee5.svg", kind: "ott" },
+  { name: "Sony LIV", monogram: "LIV", accent: "#1D4ED8", logo: "/logos/sony-liv.svg", kind: "ott" },
+  { name: "JioHotstar", monogram: "JH", accent: "#0F3CC9", logo: "/logos/jiohotstar.svg", kind: "ott" },
+  { name: "Prime Video", monogram: "PV", accent: "#00A8E1", logo: "/logos/prime-video.svg", kind: "ott" },
+  { name: "Sun TV", monogram: "Sun", accent: "#E11D2E", logo: "/logos/sun-tv.svg", kind: "channel" },
+  { name: "KTV", monogram: "KTV", accent: "#DB2777", logo: "/logos/ktv.svg", kind: "channel" },
+  { name: "Star Vijay", monogram: "SV", accent: "#9333EA", logo: "/logos/star-vijay.svg", kind: "channel" },
+  { name: "Colors Tamil", monogram: "CT", accent: "#EA580C", logo: "/logos/colors-tamil.svg", kind: "channel" },
+  { name: "Zee Tamil", monogram: "ZT", accent: "#7C3AED", logo: "/logos/zee-tamil.svg", kind: "channel" },
+  { name: "Star Sports", monogram: "SS", accent: "#0EA5E9", logo: "/logos/star-sports.svg", kind: "channel" },
 ] as const;
 
 /** Names only, derived from SERVICES so the two never drift apart. */
