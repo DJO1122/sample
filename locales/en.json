@@ -12,7 +12,10 @@
     "subtitle": "Internet + 350+ Live TV Channels + OTT — one connection, one bill.",
     "ctaPlans": "View Plans",
     "ctaBook": "Book Free Site Check",
-    "meterLabel": "Speeds up to"
+    "meterLabel": "Speeds up to",
+    "trust1": "Free router & install",
+    "trust2": "No shared-cable slowdowns",
+    "trust3": "24/7 local support"
   },
   "welcome": {
     "title": "Welcome Offer Plans",
@@ -60,7 +63,11 @@
     "channels": "Live channels",
     "maxSpeed": "Max speed (Mbps)",
     "support": "Support",
-    "supportValue": "24/7"
+    "supportValue": "24/7",
+    "trustBarStat1": "Speeds up to",
+    "trustBarStat2": "Live channels",
+    "trustBarStat3": "OTT apps",
+    "trustBarStat4": "Support"
   },
   "testimonials": {
     "title": "What our customers say",

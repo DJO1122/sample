@@ -12,7 +12,10 @@
     "subtitle": "இண்டர்நெட் + 350+ நேரலை சேனல்கள் + OTT — ஒரே இணைப்பு, ஒரே பில்.",
     "ctaPlans": "திட்டங்களைப் பார்க்க",
     "ctaBook": "இலவச இட ஆய்வு",
-    "meterLabel": "வேகம்"
+    "meterLabel": "வேகம்",
+    "trust1": "இலவச ரவுட்டர் & நிறுவல்",
+    "trust2": "வேகக் குறைவு இல்லை",
+    "trust3": "24/7 உள்ளூர் ஆதரவு"
   },
   "welcome": {
     "title": "வரவேற்பு சலுகை திட்டங்கள்",
@@ -60,7 +63,11 @@
     "channels": "நேரலை சேனல்கள்",
     "maxSpeed": "அதிகபட்ச வேகம் (Mbps)",
     "support": "ஆதரவு",
-    "supportValue": "24/7"
+    "supportValue": "24/7",
+    "trustBarStat1": "வேகம்",
+    "trustBarStat2": "நேரலை சேனல்கள்",
+    "trustBarStat3": "OTT செயலிகள்",
+    "trustBarStat4": "ஆதரவு"
   },
   "testimonials": {
     "title": "வாடிக்கையாளர்கள் கூறுவது",

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, CalendarCheck } from "lucide-react";
+import { ArrowRight, CalendarCheck, Check } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { usePrefersReducedMotion } from "@/lib/motion";
 import { CTAButton } from "@/components/CTAButton";
@@ -65,6 +65,25 @@ export function Hero() {
               {t("hero.ctaBook")}
             </CTAButton>
           </motion.div>
+
+          <motion.ul
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.24 }}
+            className="mt-8 flex flex-wrap gap-x-6 gap-y-2"
+          >
+            {["hero.trust1", "hero.trust2", "hero.trust3"].map((key) => (
+              <li
+                key={key}
+                className="flex items-center gap-2 text-sm font-medium text-white/80"
+              >
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-cyan/20 text-cyan">
+                  <Check className="h-3 w-3" aria-hidden="true" />
+                </span>
+                {t(key)}
+              </li>
+            ))}
+          </motion.ul>
         </div>
 
         <div className="relative">

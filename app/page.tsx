@@ -8,6 +8,7 @@ import {
 import { Hero } from "@/components/home/Hero";
 import { WelcomeOffers } from "@/components/plans/WelcomeOffers";
 import { WhyAerotel } from "@/components/home/WhyAerotel";
+import { TrustBar } from "@/components/home/TrustBar";
 import { ComboPreview } from "@/components/home/ComboPreview";
 import { EntertainmentStrip } from "@/components/home/EntertainmentStrip";
 import { HowItWorks } from "@/components/home/HowItWorks";
@@ -27,6 +28,7 @@ export default function HomePage() {
     <>
       <Hero />
       <WaveDivider />
+      <TrustBar />
       <WhyAerotel />
       <WelcomeOffers />
       <ComboPreview />

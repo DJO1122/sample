@@ -27,8 +27,12 @@ export function WhyAerotel() {
         <RevealGroup className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {CARDS.map(({ icon: Icon, title, body }) => (
             <RevealItem key={title}>
-              <article className="card h-full p-6 transition-transform duration-300 hover:-translate-y-1">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-gradient text-white">
+              <article className="card group relative h-full overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-royal/30 hover:shadow-glow">
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-cyan-gradient transition-transform duration-300 group-hover:scale-x-100"
+                />
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-gradient text-white shadow-glow transition-transform duration-300 group-hover:scale-105">
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <h3 className="mt-4 font-display text-lg font-bold text-navy">
