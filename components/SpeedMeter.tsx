@@ -50,8 +50,8 @@ export function SpeedMeter({ label }: { label: string }) {
       <svg viewBox="0 0 200 150" className="w-full">
         <defs>
           <linearGradient id="meterArc" x1="0" y1="1" x2="1" y2="0">
-            <stop offset="0%" stopColor="#5B21B6" />
-            <stop offset="60%" stopColor="#8B5CF6" />
+            <stop offset="0%" stopColor="#4338CA" />
+            <stop offset="60%" stopColor="#C026D3" />
             <stop offset="100%" stopColor="#22D3EE" />
           </linearGradient>
         </defs>
@@ -127,7 +127,7 @@ export function SpeedMeter({ label }: { label: string }) {
           />
         </motion.g>
 
-        <circle cx={CENTER} cy={CENTER} r={7} fill="#0B1A5C" stroke="#22D3EE" strokeWidth={2} />
+        <circle cx={CENTER} cy={CENTER} r={7} fill="#1E1B4B" stroke="#22D3EE" strokeWidth={2} />
       </svg>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-1 text-center">

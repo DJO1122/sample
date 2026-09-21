@@ -40,7 +40,7 @@ function buildHtml(lead: LeadRecord): string {
 
   return `<!doctype html><html><body style="margin:0;background:#F7F8FC;font-family:Arial,Helvetica,sans-serif">
     <div style="max-width:560px;margin:24px auto;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #E2E8F0">
-      <div style="background:#0B1A5C;padding:18px 20px;color:#fff">
+      <div style="background:#1E1B4B;padding:18px 20px;color:#fff">
         <div style="font-size:18px;font-weight:700">New connection request</div>
         <div style="font-size:13px;opacity:.8">${escapeHtml(SITE.domain)}</div>
       </div>

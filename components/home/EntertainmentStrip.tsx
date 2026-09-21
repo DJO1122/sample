@@ -72,13 +72,13 @@ export function EntertainmentStrip() {
 
       <div className="mt-8 space-y-4">
         <div>
-          <p className="container-page mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan">
+          <p className="container-page mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white">
             OTT apps
           </p>
           <Marquee items={OTT} />
         </div>
         <div>
-          <p className="container-page mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan">
+          <p className="container-page mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white">
             {LIVE_CHANNEL_COUNT}+ live channels include
           </p>
           <Marquee items={CHANNELS} reversed />

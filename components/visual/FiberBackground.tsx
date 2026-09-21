@@ -27,8 +27,8 @@ export function FiberBackground({ className }: { className?: string }) {
       >
         <defs>
           <linearGradient id="fiberLine" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0" />
-            <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.45" />
+            <stop offset="0%" stopColor="#C026D3" stopOpacity="0" />
+            <stop offset="50%" stopColor="#C026D3" stopOpacity="0.45" />
             <stop offset="100%" stopColor="#22D3EE" stopOpacity="0.15" />
           </linearGradient>
           <linearGradient id="fiberPulse" x1="0" y1="0" x2="1" y2="0">

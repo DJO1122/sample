@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: "#0B1A5C",
-        royal: "#5B21B6",
-        violet: "#8B5CF6",
+        navy: "#1E1B4B",
+        royal: "#4338CA",
+        violet: "#C026D3",
         cyan: "#22D3EE",
         surface: "#F7F8FC",
         ink: "#0F172A",
@@ -28,8 +28,8 @@ const config: Config = {
         sans: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       backgroundImage: {
-        "brand-gradient": "linear-gradient(120deg, #0B1A5C 0%, #5B21B6 55%, #8B5CF6 100%)",
-        "cyan-gradient": "linear-gradient(120deg, #5B21B6 0%, #22D3EE 100%)",
+        "brand-gradient": "linear-gradient(120deg, #1E1B4B 0%, #4338CA 55%, #C026D3 100%)",
+        "cyan-gradient": "linear-gradient(120deg, #4338CA 0%, #22D3EE 100%)",
       },
       boxShadow: {
         glow: "0 0 0 1px rgba(139,92,246,0.18), 0 18px 45px -18px rgba(11,26,92,0.45)",
