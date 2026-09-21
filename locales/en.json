@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Home",
+    "plans": "Plans",
+    "contact": "Contact",
+    "callNow": "Call Now",
+    "skipToContent": "Skip to main content"
+  },
+  "hero": {
+    "eyebrow": "Fiber broadband in Tirupur",
+    "title": "Blazing-Fast Fiber for Every Home in Tirupur",
+    "subtitle": "Internet + 350+ Live TV Channels + OTT — one connection, one bill.",
+    "ctaPlans": "View Plans",
+    "ctaBook": "Book Free Site Check",
+    "meterLabel": "Speeds up to",
+    "trust1": "Free router & install",
+    "trust2": "No shared-cable slowdowns",
+    "trust3": "24/7 local support"
+  },
+  "welcome": {
+    "title": "Welcome Offer Plans",
+    "subtitle": "New connections only. Valid for 90 days.",
+    "ribbon": "Limited Offer",
+    "days": "90 days",
+    "cta": "Claim this offer"
+  },
+  "why": {
+    "title": "Why Aerotel",
+    "subtitle": "Local team, real fiber, and support that picks up the phone.",
+    "speedTitle": "Pure Fiber Speed",
+    "speedBody": "True fiber to your home, up to 500 Mbps, with no shared cable slowdowns.",
+    "supportTitle": "24/7 Service",
+    "supportBody": "Our Tirupur team answers day or night, and we fix faults fast.",
+    "bundleTitle": "Free IPTV & OTT",
+    "bundleBody": "350+ live channels and the Smart Play TV app bundle on eligible plans.",
+    "routerTitle": "Free Router Installed",
+    "routerBody": "A dual-band router is installed and configured at no extra cost."
+  },
+  "combo": {
+    "title": "Triple Play Combo Packs",
+    "subtitle": "WiFi + IPTV + OTT in one connection and one bill.",
+    "cta": "Book This Plan",
+    "includes": "What you get",
+    "perMonth": "/month"
+  },
+  "entertainment": {
+    "title": "Entertainment included",
+    "subtitle": "Smart Play TV OTT apps and 350+ live channels in SD and HD."
+  },
+  "steps": {
+    "title": "How it works",
+    "subtitle": "From your first call to your first stream, usually within 48 hours.",
+    "s1Title": "Call or Book",
+    "s1Body": "Ring us or send the booking form with your area.",
+    "s2Title": "Site Check",
+    "s2Body": "We verify coverage, map location and wiring distance.",
+    "s3Title": "Installation",
+    "s3Body": "Our technician runs the fiber and installs your free router.",
+    "s4Title": "Enjoy",
+    "s4Body": "Stream, game and watch 350+ channels the same day."
+  },
+  "stats": {
+    "channels": "Live channels",
+    "maxSpeed": "Max speed (Mbps)",
+    "support": "Support",
+    "supportValue": "24/7",
+    "trustBarStat1": "Speeds up to",
+    "trustBarStat2": "Live channels",
+    "trustBarStat3": "OTT apps",
+    "trustBarStat4": "Support"
+  },
+  "testimonials": {
+    "title": "What our customers say",
+    "subtitle": "Reviews from homes and shops across Tirupur."
+  },
+  "finalCta": {
+    "title": "Ready for a faster connection?",
+    "subtitle": "Book a free site check today. We will confirm availability in your area.",
+    "primary": "Book a Connection",
+    "secondary": "WhatsApp Us"
+  },
+  "plansPage": {
+    "title": "Broadband, IPTV and OTT Plans",
+    "subtitle": "Clear pricing, no hidden charges. All prices exclude 18% GST.",
+    "explorerTitle": "Compare every plan",
+    "explorerSubtitle": "Switch between WiFi, IPTV and OTT to see what each plan costs.",
+    "filterLabel": "Filter by speed",
+    "filterAll": "All speeds",
+    "included": "Included FREE",
+    "speed": "Speed",
+    "price": "Price",
+    "book": "Book",
+    "quizTitle": "Which plan is right for me?",
+    "quizSubtitle": "Three quick questions and we will suggest a pack.",
+    "quizUsers": "How many people use the internet at home?",
+    "quizTv": "Do you want live TV channels?",
+    "quizOtt": "Do you want OTT apps?",
+    "quizYes": "Yes",
+    "quizNo": "No",
+    "quizResult": "We recommend",
+    "quizRestart": "Start again",
+    "faqTitle": "Frequently asked questions"
+  },
+  "contactPage": {
+    "title": "Book Your Connection",
+    "subtitle": "Share your details and our team will call you back shortly.",
+    "formTitle": "Booking form",
+    "name": "Full name",
+    "mobile": "Mobile number",
+    "area": "Area / Locality",
+    "address": "Full address",
+    "plan": "Preferred plan",
+    "planPlaceholder": "Select a plan",
+    "callback": "Preferred call-back time",
+    "message": "Message (optional)",
+    "consent": "I agree to be contacted about this enquiry and accept the Privacy Policy.",
+    "submit": "Book My Connection",
+    "submitting": "Sending...",
+    "successTitle": "Request received",
+    "successBody": "Our team will call you shortly.",
+    "successWhatsapp": "Message us on WhatsApp",
+    "successAgain": "Send another request",
+    "errorTitle": "Could not send your request",
+    "coverage": "Plans available in selected cities — share your location and we will confirm availability.",
+    "callCta": "Call",
+    "whatsappCta": "WhatsApp",
+    "officeTitle": "Office",
+    "hoursTitle": "Office hours",
+    "supportTitle": "Support line"
+  },
+  "footer": {
+    "quickLinks": "Quick links",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "directions": "Get directions",
+    "rights": "All rights reserved.",
+    "tagline": "Fiber broadband, IPTV and OTT across Tirupur."
+  },
+  "common": {
+    "plusGst": "+ GST",
+    "mbps": "Mbps",
+    "perMonth": "/month",
+    "disclaimerTitle": "Important information",
+    "callUs": "Call us",
+    "notFoundTitle": "Signal lost",
+    "notFoundBody": "We could not find that page. The link may have moved.",
+    "notFoundCta": "Back to home"
+  },
+  "services": {
+    "title": "OTT apps and TV channels included",
+    "subtitle": "Every plan with IPTV or OTT unlocks these apps and channels.",
+    "ottHeading": "OTT apps",
+    "channelsHeading": "Live TV channels"
+  }
+}
