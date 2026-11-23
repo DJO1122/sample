@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #1e1b4b;
+    --royal: #4338ca;
+    --violet: #c026d3;
+    --cyan: #22d3ee;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible, high-contrast focus for keyboard users on every interactive element. */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-offset-white;
+    --tw-ring-color: var(--royal);
+  }
+
+  ::selection {
+    background: var(--violet);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-royal/20 bg-royal/5 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-royal;
+  }
+
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-card;
+  }
+
+  /* Opaque enough that the nav text clears WCAG AA over any hero artwork
+     behind it - a translucent bar blended the hero gradient into the text. */
+  .glass {
+    @apply border-b border-white/15 bg-navy/95 backdrop-blur-md supports-[backdrop-filter]:bg-navy/90;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, #ffffff 15%, var(--cyan) 90%);
+  }
+
+  .gpu {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+  }
+}
+
+/*
+ * prefers-reduced-motion: kill every ambient animation and show the final
+ * state. Count-ups, the marquee and the fiber streaks also check this in JS.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
