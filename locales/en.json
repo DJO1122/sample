@@ -28,7 +28,7 @@
     "title": "Why Aerotel",
     "subtitle": "Local team, real fiber, and support that picks up the phone.",
     "speedTitle": "Pure Fiber Speed",
-    "speedBody": "True fiber to your home, up to 500 Mbps, with no shared cable slowdowns.",
+    "speedBody": "True fiber to your home, up to 500 Mbps, with no shared-cable slowdowns.",
     "supportTitle": "24/7 Service",
     "supportBody": "Our Tirupur team answers day or night, and we fix faults fast.",
     "bundleTitle": "Free IPTV & OTT",
@@ -49,7 +49,7 @@
   },
   "steps": {
     "title": "How it works",
-    "subtitle": "From your first call to your first stream, usually within 48 hours.",
+    "subtitle": "Most homes are connected within 48 hours of the site check.",
     "s1Title": "Call or Book",
     "s1Body": "Ring us or send the booking form with your area.",
     "s2Title": "Site Check",
@@ -57,7 +57,7 @@
     "s3Title": "Installation",
     "s3Body": "Our technician runs the fiber and installs your free router.",
     "s4Title": "Enjoy",
-    "s4Body": "Stream, game and watch 350+ channels the same day."
+    "s4Body": "Stream, game and watch 350+ channels as soon as you are connected."
   },
   "stats": {
     "channels": "Live channels",

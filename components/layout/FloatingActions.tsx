@@ -6,7 +6,7 @@ import { SITE, WHATSAPP_URL } from "@/data/site";
 /** Thumb-reach call and WhatsApp buttons. Most visitors arrive on a phone. */
 export function FloatingActions() {
   return (
-    <div className="fixed bottom-4 right-4 z-40 flex flex-col gap-3 sm:bottom-6 sm:right-6">
+    <aside aria-label="Quick contact" className="fixed bottom-4 right-4 z-40 flex flex-col gap-3 sm:bottom-6 sm:right-6">
       <a
         href={WHATSAPP_URL}
         target="_blank"
@@ -24,6 +24,6 @@ export function FloatingActions() {
       >
         <Phone className="relative h-5 w-5" aria-hidden="true" />
       </a>
-    </div>
+    </aside>
   );
 }

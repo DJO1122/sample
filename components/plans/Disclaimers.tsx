@@ -10,7 +10,7 @@ export function Disclaimers({ className }: { className?: string }) {
   const { t } = useI18n();
 
   return (
-    <aside
+    <section
       className={cn(
         "rounded-2xl border border-royal/15 bg-royal/5 p-5 text-sm text-slate-700",
         className,
@@ -29,6 +29,6 @@ export function Disclaimers({ className }: { className?: string }) {
           </li>
         ))}
       </ul>
-    </aside>
+    </section>
   );
 }
